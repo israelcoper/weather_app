@@ -35,8 +35,6 @@ class WeatherApiService
         end
     end
 
-    protected
-
     def set_weather_condition(temperature = 0)
         self.weather_condition = if temperature < 20
                 CONDITIONS[:cold]
