@@ -8,6 +8,8 @@ class PostcodeValidator < ActiveModel::EachValidator
 end
 
 class Address < ApplicationRecord
+    has_many :weather_conditions, dependent: :destroy
+
     validates :postcode, presence: true, postcode: true
 
     # override setter to normalise postcode

@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
+gem 'handlebars_assets'
 
 # UK postcode validator
 gem 'uk_postcode', '~> 2.1', '>= 2.1.6'
@@ -48,6 +49,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'pry-byebug'
+  gem 'pry-rails'
 end
 
 group :development do
