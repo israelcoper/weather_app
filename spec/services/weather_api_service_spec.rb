@@ -20,7 +20,7 @@ RSpec.describe WeatherApiService, type: :model do
 
             it "returns uk weather forecast as json" do
                 stub_request(:get, "http://api.weatherapi.com/v1/forecast.json").
-                    with(query: { "key" => CONFIG["WEATHER_API_KEY"], "q" => "W1A 2AB" }).
+                    with(query: { "key" => ENV["WEATHER_API_KEY"], "q" => "W1A 2AB" }).
                     to_return(status: 200, headers: { content_type: 'application/json' }, body: forecast_response.to_json)
 
                 forecast = valid_api.forecast
@@ -41,7 +41,7 @@ RSpec.describe WeatherApiService, type: :model do
 
             it "returns no matching location found message" do
                 stub_request(:get, "http://api.weatherapi.com/v1/forecast.json").
-                    with(query: { "key" => CONFIG["WEATHER_API_KEY"], "q" => "de53pi" }).
+                    with(query: { "key" => ENV["WEATHER_API_KEY"], "q" => "de53pi" }).
                     to_return(status: 200, headers: { content_type: 'application/json' }, body: forecast_response.to_json)
 
                 forecast = invalid_api.forecast

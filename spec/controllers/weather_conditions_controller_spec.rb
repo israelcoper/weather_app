@@ -43,7 +43,7 @@ RSpec.describe WeatherConditionsController, type: :controller do
 
             it "returns successful json response" do
                 stub_request(:get, "http://api.weatherapi.com/v1/forecast.json").
-                    with(query: { "key" => CONFIG["WEATHER_API_KEY"], "q" => "W1A 2AB" }).
+                    with(query: { "key" => ENV["WEATHER_API_KEY"], "q" => "W1A 2AB" }).
                     to_return(status: 200, headers: { content_type: 'application/json' }, body: forecast_response.to_json)
 
                 post :create, params: { postcode: "w1a2ab" }

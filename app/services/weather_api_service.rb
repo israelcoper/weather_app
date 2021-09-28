@@ -2,7 +2,7 @@ class WeatherApiService
     include HTTParty
     base_uri 'http://api.weatherapi.com/v1'
 
-    API_KEY = CONFIG["WEATHER_API_KEY"]
+    API_KEY = ENV["WEATHER_API_KEY"]
 
     CONDITIONS = { cold: "COLD", warm: "WARM", hot: "HOT" }
 
