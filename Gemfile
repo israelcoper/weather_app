@@ -56,6 +56,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 4.0'
   gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem "webmock"
 end
 
 group :development do

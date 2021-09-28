@@ -49,7 +49,7 @@ class WeatherConditionsController < ApplicationController
             end
         else
             # invalid uk postcode
-            json = { valid: false, message: "#{@address.postcode} #{@address.errors.full_messages[0]}" }
+            json = { valid: false, message: "#{@address.postcode} #{@address.errors.full_messages[0]}".strip }
         end
 
         render json: json

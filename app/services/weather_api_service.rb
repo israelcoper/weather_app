@@ -2,7 +2,7 @@ class WeatherApiService
     include HTTParty
     base_uri 'http://api.weatherapi.com/v1'
 
-    API_KEY = "bca37e59d53c4e2faba12325212809" # TODO: place in yml file
+    API_KEY = CONFIG["WEATHER_API_KEY"]
 
     CONDITIONS = { cold: "COLD", warm: "WARM", hot: "HOT" }
 
