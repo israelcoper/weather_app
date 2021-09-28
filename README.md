@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby 2.7.4
 
-Things you may want to cover:
+* Rails 5.1.7
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
+* Setup
+    - bundle install
 
 * Database creation
+    - rake db:create
+    - rake db:migrate
 
-* Database initialization
+* Create config file then provide the weatherapi key
+    - cp config/application.yml.sample config/application.yml
 
 * How to run the test suite
+    - rspec
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* How to run the app
+    - rails s
